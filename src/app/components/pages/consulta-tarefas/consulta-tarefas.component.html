@@ -1,0 +1,68 @@
+<div>
+    <div class="card shadow w-100">
+        <div class="card-header bg-light text-dark">
+            <h4 class="card-title">Consulta de Tarefas</h4>
+            <p class="card-subtitle">Informe o período de datas para consultar tarefas.</p>
+        </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="row mb-3">
+                    <div class="col-md-2">
+                        <Label>Data de início:</Label>
+                        <input type="date" class="form-control"/>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Data de fim:</label>
+                        <input type="date" class="form-control"/>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-success mt-4">
+                            Pesquisar tarefas
+                        </button>                        
+                    </div>
+                </div>
+
+            </form>
+
+            <table class="table table-sm table-responsive mt-4">
+                <thead>
+                    <tr>
+                        <th>Nome da tarefa</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Finalizado</th>
+                        <th>Categoria</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary me-1">
+                                Editar
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger me-1">
+                                Excluir
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            Quantidade de tarefas: 0
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+    </div>
+</div>

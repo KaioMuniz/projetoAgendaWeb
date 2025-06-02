@@ -1,44 +1,56 @@
-<div class="container mt-4">
-  <div class="card shadow w-100">
-    <div class="card-header bg-primary text-white">
-      Cadastro de Tarefa
+<div>
+    <div class="card shadow w-100">
+        <div class="card-header bg-light text-dark">
+            <h4 class="card-title">Cadastro de Tarefas</h4>
+            <p class="card-subtitle">Preencha o formulário para incluir uma tarefa.</p>
+        </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Título da Tarefa:</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Digite o título da tarefa">
+                </div>
+
+                <div class="mb-3">
+                    <label for="data" class="form-label">Data:</label>
+                    <input type="date" class="form-control" id="data">
+                </div>
+
+                <div class="mb-3">
+                    <label for="hora" class="form-label">Hora:</label>
+                    <input type="time" class="form-control" id="hora">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block">Finalizado</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="finalizado" id="finalizadoSim" value="sim">
+                        <label class="form-check-label" for="finalizadoSim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="finalizado" id="finalizadoNao" value="nao">
+                        <label class="form-check-label" for="finalizadoNao">Não</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoria</label>
+                    <select class="form-select" id="categoria">
+                        <option selected disabled>Selecione uma categoria</option>
+                        <option value="trabalho">Trabalho</option>
+                        <option value="estudo">Estudo</option>
+                        <option value="pessoal">Pessoal</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Realizar Cadastro
+                </button>
+
+            </form>
+
+        </div>
     </div>
-    <div class="card-body">
-      <form>
-        <div class="mb-3">
-          <label for="titulo" class="form-label">Título da Tarefa</label>
-          <input type="text" class="form-control" id="titulo" placeholder="Digite o título da tarefa">
-        </div>
-
-        <div class="mb-3">
-          <label for="dataHora" class="form-label">Data e Hora</label>
-          <input type="datetime-local" class="form-control" id="dataHora">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label d-block">Finalizado</label>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="finalizado" id="finalizadoSim" value="sim">
-            <label class="form-check-label" for="finalizadoSim">Sim</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="finalizado" id="finalizadoNao" value="nao">
-            <label class="form-check-label" for="finalizadoNao">Não</label>
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="categoria" class="form-label">Categoria</label>
-          <select class="form-select" id="categoria">
-            <option selected disabled>Selecione uma categoria</option>
-            <option value="trabalho">Trabalho</option>
-            <option value="estudo">Estudo</option>
-            <option value="pessoal">Pessoal</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Salvar</button>
-      </form>
-    </div>
-  </div>
 </div>
