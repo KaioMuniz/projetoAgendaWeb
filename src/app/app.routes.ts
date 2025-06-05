@@ -5,8 +5,8 @@ import { EdicaoTarefasComponent } from './components/pages/edicao-tarefas/edicao
 
 export const routes: Routes = [
     {
-        path: 'pages/cadastro-tarefas',
-        component: CadastroTarefasComponent
+        path: 'pages/cadastro-tarefas',// rotas
+        component: CadastroTarefasComponent //componente
 
     },
     {
