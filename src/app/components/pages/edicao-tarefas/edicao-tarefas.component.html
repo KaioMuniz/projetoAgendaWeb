@@ -1,1 +1,104 @@
-<p>edicao-tarefas works!</p>
+<div>
+    <div class="card shadow w-100">
+        <div class="card-header bg-light text-dark">
+            <h4 class="card-title">Edição de Tarefas</h4>
+            <p class="card-subtitle">Utilize o formulário para alterar uma tarefa.</p>
+        </div>
+        <div class="card-body">
+
+            <div *ngIf="mensagem" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Sucesso!</strong> {{ mensagem }}
+                <button type="button" class="btn-close" (click)="mensagem = ''" aria-label="Close"></button>
+            </div>
+
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Título da Tarefa:</label>
+                    <input type="text" formControlName="titulo" class="form-control"
+                        placeholder="Digite o título da tarefa">
+
+                    <div class="text-danger" *ngIf="form.get('titulo')?.touched">
+                        <div *ngIf="form.get('titulo')?.hasError('required')">
+                            Por favor, preencha o título da tarefa.
+                        </div>
+                        <div *ngIf="form.get('titulo')?.hasError('minlength')">
+                            Por favor, informe pelo menos 8 caracteres no título da tarefa.
+                        </div>
+                        <div *ngIf="form.get('titulo')?.hasError('maxlength')">
+                            Por favor, informe no máximo 150 caracteres no título da tarefa.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="data" class="form-label">Data:</label>
+                    <input type="date" formControlName="data" class="form-control">
+
+                    <div class="text-danger" *ngIf="form.get('data')?.touched">
+                        <div *ngIf="form.get('data')?.hasError('required')">
+                            Por favor, selecione a data da tarefa.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="hora" class="form-label">Hora:</label>
+                    <input type="time" formControlName="hora" class="form-control">
+
+                    <div class="text-danger" *ngIf="form.get('hora')?.touched">
+                        <div *ngIf="form.get('hora')?.hasError('required')">
+                            Por favor, selecione a hora da tarefa.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block">Finalizado</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="finalizado" [value]="true" />
+                        <label class="form-check-label" for="finalizadoSim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" formControlName="finalizado" [value]="false">
+                        <label class="form-check-label" for="finalizadoNao">Não</label>
+                    </div>
+
+                    <div class="text-danger" *ngIf="form.get('finalizado')?.touched">
+                        <div *ngIf="form.get('finalizado')?.hasError('required')">
+                            Por favor, escolha SIM ou NÃO para informar se a tarefa está finalizada.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoria</label>
+                    <select class="form-select" formControlName="categoriaId">
+                        <option value="">Selecione uma categoria</option>
+                        <!-- Imprimindo uma tag <option> para cada categoria obtida -->
+                        <option *ngFor="let c of categorias" value="{{ c.id }}">
+                            {{ c.nome | uppercase }}
+                        </option>
+                    </select>
+
+                    <div class="text-danger" *ngIf="form.get('categoriaId')?.touched">
+                        <div *ngIf="form.get('categoriaId')?.hasError('required')">
+                            Por favor, selecione a categoria desejada para a tarefa.
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
+                    Salvar Alterações
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</div>

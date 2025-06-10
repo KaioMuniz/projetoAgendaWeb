@@ -57,10 +57,13 @@
                             </span>
                         </td>
                         <td>
-                            <button class="btn btn-sm btn-outline-primary me-1">
+                            <button class="btn btn-sm btn-outline-primary me-1"
+                                [routerLink]="['/pages/edicao-tarefas', t.id]">
                                 Editar
                             </button>
-                            <button class="btn btn-sm btn-outline-danger me-1">
+                            <button class="btn btn-sm btn-outline-danger me-1"
+                                data-bs-toggle="modal" data-bs-target="#janela_exclusao"
+                                (click)="onConfirm(t)">
                                 Excluir
                             </button>
                         </td>
@@ -77,4 +80,42 @@
 
         </div>
     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="janela_exclusao" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir tarefa</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Deseja realmente excluir esta tarefa?
+        
+        <div class="mt-2">
+            <strong>Título:</strong> {{ tarefaSelecionada?.titulo | uppercase }}
+        </div>
+        <div class="mt-1">
+            <strong>Data:</strong> {{ tarefaSelecionada?.data | date: 'dd/MM/yyyy' }}
+        </div>
+        <div class="mt-1">
+            <strong>Hora:</strong> {{ tarefaSelecionada?.hora }}
+        </div>
+        <div class="mt-1">
+            <strong>Finalizado:</strong> {{ tarefaSelecionada?.finalizado ? 'SIM' : 'NÃO' }}
+        </div>
+        <div class="mt-1">
+            <strong>Categoria:</strong> {{ tarefaSelecionada?.categoria?.nome | uppercase }}
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" (click)="onDelete()" class="btn btn-danger" data-bs-dismiss="modal">
+            Confirmar exclusão
+        </button>  
+      </div>
+    </div>
+  </div>
 </div>
