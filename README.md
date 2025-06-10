@@ -31,39 +31,13 @@ Bem-vindo ao **Agenda Web**, uma aplicação moderna e eficiente que permite o g
 - **Banco de Dados**:
   - **MySQL/PostgreSQL**: Banco de dados relacional para armazenar os dados da agenda.
 
-## Como Rodar o Projeto?
-
-### 1. **Instalação do Frontend** (Angular)
-Se você ainda não tem o Angular CLI instalado, instale-o globalmente:
-
-```bash
-npm install -g @angular/cli
-```
-
-Para rodar a aplicação frontend:
-
-```bash
-git clone https://github.com/KaioMuniz/projetoAgendaWeb.git
-cd projetoAgendaWeb
-npm install
-ng serve
-```
-
-Isso fará a aplicação ficar disponível em **http://localhost:4200/**.
-
-### 2. **Instalação do Backend** (Spring Boot)
-Clone o repositório do backend:
-
-```bash
-git clone https://github.com/KaioMuniz/projetoAgendaApi.git
-cd projetoAgendaApi
-./mvnw spring-boot:run
-```
-
-O backend estará disponível em **http://localhost:8081/**.
+FrontEnd : Disponível em **http://localhost:4200/**.
+BackEnd : Disponível em **http://localhost:8081/**.
 
 ### 3. **Banco de Dados**
-Certifique-se de ter o banco de dados configurado corretamente, seja MySQL ou PostgreSQL. Para um ambiente de desenvolvimento, você pode usar as configurações padrão ou ajustar o arquivo `application.properties` para corresponder ao seu banco de dados.
+Você pode usar as configurações padrão ou ajustar o arquivo `application.properties` para corresponder ao seu banco de dados.
+![image](https://github.com/user-attachments/assets/8195160b-8ae9-4d1e-bb9a-cba1d1188efc)
+
 
 ## Funcionalidades
 
