@@ -1,60 +1,97 @@
 
-# Projeto Agenda Web
+# **Agenda Web - Aplicação Completa de Gestão de Agenda**
 
-Este é o repositório do projeto **Agenda Web**, uma aplicação baseada em **Angular** para gestão de agendas, com integração ao backend de uma API. O projeto foi desenvolvido para proporcionar uma interface interativa e fácil de usar para gerenciar compromissos e eventos.
+Bem-vindo ao **Agenda Web**, uma aplicação moderna e eficiente que permite o gerenciamento de compromissos e eventos de forma ágil e intuitiva. Este projeto é composto por três partes principais:
+
+1. **Frontend**: Desenvolvido em **Angular**, com uma interface interativa e responsiva.
+2. **Backend**: API RESTful construída com Java (Spring Boot), que fornece as operações necessárias para o gerenciamento dos dados.
+3. **Banco de Dados**: Sistema robusto de banco de dados (relacional) utilizado para armazenar todos os dados de usuários, compromissos e eventos.
+
+### **O Que Você Vai Encontrar Aqui?**
+
+- **Frontend**: Uma aplicação Angular que permite ao usuário interagir com o sistema de agenda diretamente.
+- **Backend**: A API foi construída com Spring Boot e contém endpoints para criação, leitura, atualização e exclusão de compromissos.
+- **Banco de Dados**: Um banco de dados que armazena dados essenciais para o funcionamento da aplicação.
 
 ## Tecnologias Utilizadas
 
-- **Frontend**: Angular
-- **Backend**: [Link para a API backend] (relacionado ao projeto API)
-- **TypeScript**: Para desenvolvimento de código robusto e de fácil manutenção
-- **Node.js**: Para rodar a aplicação em ambiente de desenvolvimento
-- **NPM/Yarn**: Para gerenciamento de dependências
+- **Frontend**: 
+  - **Angular**: Framework utilizado para criar uma interface interativa e fluida.
+  - **TypeScript**: Garantindo a escalabilidade e confiabilidade do código.
+  - **HTML/CSS**: Estrutura e design responsivos.
 
-## Pré-requisitos
+- **Backend**:
+  - **Spring Boot**: Framework que facilita o desenvolvimento de APIs robustas em Java.
+  - **Swagger**: Documentação interativa para a API, tornando fácil o teste de endpoints diretamente no navegador.
 
-Antes de rodar o projeto, você precisa garantir que tenha os seguintes itens instalados:
+- **Banco de Dados**:
+  - **MySQL/PostgreSQL**: Banco de dados relacional para armazenar os dados da agenda.
 
-- [Node.js](https://nodejs.org/) versão 12.x ou superior
-- [Angular CLI](https://angular.io/cli)
-- [Git](https://git-scm.com/)
+## Como Rodar o Projeto?
 
-## Instalação
-
-1. Clone este repositório em sua máquina local:
-    ```bash
-    git clone https://github.com/KaioMuniz/projetoAgendaWeb.git
-    ```
-
-2. Navegue até a pasta do projeto:
-    ```bash
-    cd projetoAgendaWeb
-    ```
-
-3. Instale as dependências do projeto:
-    ```bash
-    npm install
-    ```
-
-## Como Rodar o Projeto
-
-Para rodar a aplicação localmente, execute o comando:
+### 1. **Instalação do Frontend** (Angular)
+Se você ainda não tem o Angular CLI instalado, instale-o globalmente:
 
 ```bash
+npm install -g @angular/cli
+```
+
+Para rodar a aplicação frontend:
+
+```bash
+git clone https://github.com/KaioMuniz/projetoAgendaWeb.git
+cd projetoAgendaWeb
+npm install
 ng serve
 ```
 
-A aplicação estará disponível em `http://localhost:4200/`.
+Isso fará a aplicação ficar disponível em **http://localhost:4200/**.
 
-## Estrutura do Projeto
+### 2. **Instalação do Backend** (Spring Boot)
+Clone o repositório do backend:
 
-- **src/**: Contém os arquivos principais da aplicação Angular.
-- **public/**: Arquivos estáticos públicos (HTML, imagens, etc.).
-- **README.md**: Este arquivo de documentação.
+```bash
+git clone https://github.com/KaioMuniz/projetoAgendaApi.git
+cd projetoAgendaApi
+./mvnw spring-boot:run
+```
 
-## Contribuições
+O backend estará disponível em **http://localhost:8081/**.
 
-Se você deseja contribuir com melhorias, siga estas etapas:
+### 3. **Banco de Dados**
+Certifique-se de ter o banco de dados configurado corretamente, seja MySQL ou PostgreSQL. Para um ambiente de desenvolvimento, você pode usar as configurações padrão ou ajustar o arquivo `application.properties` para corresponder ao seu banco de dados.
+
+## Funcionalidades
+
+### **Frontend (Angular)**:
+- Visualização de compromissos e eventos agendados.
+- Criação, edição e exclusão de compromissos.
+- Interface limpa e intuitiva para o usuário.
+- Responsividade para uma experiência de usuário otimizada em dispositivos móveis.
+
+### **Backend (Spring Boot)**:
+- API RESTful para manipulação de dados de agenda.
+- Endpoints para:
+  - `GET /api/compromissos`: Listar todos os compromissos.
+  - `POST /api/compromissos`: Criar um novo compromisso.
+  - `PUT /api/compromissos/{id}`: Atualizar um compromisso existente.
+  - `DELETE /api/compromissos/{id}`: Excluir um compromisso.
+
+  **A documentação dos endpoints está disponível via Swagger** em: 
+  - **[Swagger UI](http://localhost:8081/swagger-ui/index.html#)**
+
+### **Banco de Dados**:
+- Armazena dados relacionados a compromissos, usuários e eventos.
+- Relacionamento entre usuários e seus compromissos agendados.
+
+## URLs Importantes
+
+- **Frontend (Angular)**: [http://localhost:4200/](http://localhost:4200/)  
+- **Swagger UI (Backend)**: [http://localhost:8081/swagger-ui/index.html#](http://localhost:8081/swagger-ui/index.html#)
+
+## Como Contribuir
+
+Se você deseja contribuir para o projeto, siga estas etapas:
 
 1. Faça um fork deste repositório.
 2. Crie uma branch para a sua modificação:
@@ -69,7 +106,6 @@ Se você deseja contribuir com melhorias, siga estas etapas:
     ```bash
     git push origin minha-modificacao
     ```
-
 5. Envie um pull request para revisão.
 
 ## Licença
