@@ -1,59 +1,77 @@
-# ProjetoAgendaWeb
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+# Projeto Agenda Web
 
-## Development server
+Este é o repositório do projeto **Agenda Web**, uma aplicação baseada em **Angular** para gestão de agendas, com integração ao backend de uma API. O projeto foi desenvolvido para proporcionar uma interface interativa e fácil de usar para gerenciar compromissos e eventos.
 
-To start a local development server, run:
+## Tecnologias Utilizadas
+
+- **Frontend**: Angular
+- **Backend**: [Link para a API backend] (relacionado ao projeto API)
+- **TypeScript**: Para desenvolvimento de código robusto e de fácil manutenção
+- **Node.js**: Para rodar a aplicação em ambiente de desenvolvimento
+- **NPM/Yarn**: Para gerenciamento de dependências
+
+## Pré-requisitos
+
+Antes de rodar o projeto, você precisa garantir que tenha os seguintes itens instalados:
+
+- [Node.js](https://nodejs.org/) versão 12.x ou superior
+- [Angular CLI](https://angular.io/cli)
+- [Git](https://git-scm.com/)
+
+## Instalação
+
+1. Clone este repositório em sua máquina local:
+    ```bash
+    git clone https://github.com/KaioMuniz/projetoAgendaWeb.git
+    ```
+
+2. Navegue até a pasta do projeto:
+    ```bash
+    cd projetoAgendaWeb
+    ```
+
+3. Instale as dependências do projeto:
+    ```bash
+    npm install
+    ```
+
+## Como Rodar o Projeto
+
+Para rodar a aplicação localmente, execute o comando:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+A aplicação estará disponível em `http://localhost:4200/`.
 
-## Code scaffolding
+## Estrutura do Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **src/**: Contém os arquivos principais da aplicação Angular.
+- **public/**: Arquivos estáticos públicos (HTML, imagens, etc.).
+- **README.md**: Este arquivo de documentação.
 
-```bash
-ng generate component component-name
-```
+## Contribuições
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Se você deseja contribuir com melhorias, siga estas etapas:
 
-```bash
-ng generate --help
-```
+1. Faça um fork deste repositório.
+2. Crie uma branch para a sua modificação:
+    ```bash
+    git checkout -b minha-modificacao
+    ```
+3. Faça as alterações e commit as mudanças:
+    ```bash
+    git commit -am 'Adicionando uma nova funcionalidade'
+    ```
+4. Envie a sua branch:
+    ```bash
+    git push origin minha-modificacao
+    ```
 
-## Building
+5. Envie um pull request para revisão.
 
-To build the project run:
+## Licença
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
